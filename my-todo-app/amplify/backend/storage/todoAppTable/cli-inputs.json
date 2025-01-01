@@ -1,0 +1,10 @@
+{
+  "resourceName": "todoAppTable",
+  "tableName": "todoAppTable",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
