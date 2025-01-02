@@ -37,13 +37,13 @@ jobs:
         echo "AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID"
         echo "AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY"
       env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_TODOAPP }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_TODOAPP }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_TODOAPP_DEV }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_TODOAPP_DEV }}
 
     - name: Amplify Pull
       env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_TODOAPP }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_TODOAPP }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_TODOAPP_DEV }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_TODOAPP_DEV }}
         AWS_REGION: "ap-northeast-3"
       run: |
         amplify pull --yes \
