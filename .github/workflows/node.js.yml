@@ -28,6 +28,13 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Amplify Pull
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_TODOAPP }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_TODOAPP }}
+        AWS_REGION: "ap-northeast-3"
+      run: amplify pull --yes
+
     - name: Build project
       run: npm run build
 
@@ -38,5 +45,4 @@ jobs:
         AWS_REGION: "ap-northeast-3" # 適切なリージョンを指定
       run: |
         npm install -g @aws-amplify/cli
-        amplify pull --yes
         amplify publish --yes
