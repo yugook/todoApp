@@ -23,7 +23,7 @@ jobs:
     - name: Install Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '20' # 使用するNode.jsのバージョン
+        node-version: '23' # 使用するNode.jsのバージョン
 
     - name: Install Amplify CLI
       run: npm install -g @aws-amplify/cli
