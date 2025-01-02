@@ -38,4 +38,5 @@ jobs:
         AWS_REGION: "ap-northeast-3" # 適切なリージョンを指定
       run: |
         npm install -g @aws-amplify/cli
+        amplify pull --yes
         amplify publish --yes
