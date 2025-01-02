@@ -19,7 +19,7 @@ jobs:
     - name: Install Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '23' # 使用するNode.jsのバージョン
+        node-version: '18' # 使用するNode.jsのバージョン
 
     - name: Install dependencies
       run: npm install
@@ -34,5 +34,4 @@ jobs:
         AWS_REGION: "ap-northeast-3" # 適切なリージョンを指定
       run: |
         npm install -g @aws-amplify/cli
-        amplify pull --yes
         amplify publish --yes
