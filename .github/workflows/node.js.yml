@@ -37,7 +37,7 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_TODOAPP_DEV }}
         AWS_REGION: "ap-northeast-3"
       run: |
-        amplify pull --yes --debug\
+        amplify pull --yes \
           --amplify "{\"envName\":\"dev\"}" \
           --providers "{\"awscloudformation\":{\"Region\":\"ap-northeast-3\",\"deploymentBucketName\":\"amplify-mytodoapp-dev-4a070-deployment\",\"unauthRoleName\":\"amplify-mytodoapp-dev-4a070-unauthRole\",\"authRoleName\":\"amplify-mytodoapp-dev-4a070-authRole\"}}" \
           --frontend "{\"frontend\":\"javascript\",\"framework\":\"react\",\"config\":{\"SourceDir\":\"src\",\"DistributionDir\":\"build\",\"BuildCommand\":\"npm run build\",\"StartCommand\":\"npm start\"}}"
