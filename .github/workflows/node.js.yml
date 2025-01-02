@@ -40,7 +40,7 @@ jobs:
         amplify pull --yes \
           --amplify "{\"envName\":\"dev\"}" \
           --providers "{\"awscloudformation\":{\"Region\":\"ap-northeast-3\",\"deploymentBucketName\":\"amplify-mytodoapp-dev-4a070-deployment\",\"unauthRoleName\":\"amplify-mytodoapp-dev-4a070-unauthRole\",\"authRoleName\":\"amplify-mytodoapp-dev-4a070-authRole\"}}" \
-          --frontend "{\"frontend\":\"javascript\",\"framework\":\"react\",\"config\":{\"SourceDir\":\"src\",\"DistributionDir\":\"build\",\"BuildCommand\":\"npm run build\",\"StartCommand\":\"npm start\"}}"
+          --frontend "{\"frontend\":\"javascript\",\"framework\":\"react\",\"config\":{\"SourceDir\":\"src\",\"DistributionDir\":\"build\",\"BuildCommand\":\"npm run-script build\",\"StartCommand\":\"npm run-script start\"}}"
 
     - name: Build project
       run: npm run build
