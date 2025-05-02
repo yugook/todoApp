@@ -35,42 +35,49 @@ npm run build
 ```
 
 ## プロジェクト構成
-[package.json](http://_vscodecontentref_/0)
-[README.md](http://_vscodecontentref_/1)
-.vscode/
-  └─ settings.json
-my-todo-app/
-  ├─ .eslintignore
-  ├─ .gitignore
-  ├─ .graphqlconfig.yml
-  ├─ amplifyPublishIgnore.json
-  ├─ eslint.config.js
-  ├─ [index.html](http://_vscodecontentref_/2)
-  ├─ [package.json](http://_vscodecontentref_/3)
-  ├─ [README.md](http://_vscodecontentref_/4)
-  ├─ tailwind.config.js
-  ├─ tsconfig.app.json
-  ├─ tsconfig.json
-  ├─ tsconfig.node.json
-  ├─ vite.config.ts
-  ├─ .vscode/
-  │    └─ settings.json
-  ├─ amplify/
-  │    ├─ cli.json
-  │    ├─ [README.md](http://_vscodecontentref_/5)
-  │    ├─ team-provider-info.json
-  │    ├─ .config/
-  │    ├─ backend/
-  │    └─ hooks/
-  ├─ build/
-  ├─ public/
-  └─ src/
-       ├─ [App.tsx](http://_vscodecontentref_/6)
-       ├─ [App.css](http://_vscodecontentref_/7)
-       ├─ [index.css](http://_vscodecontentref_/8)
-       ├─ [main.tsx](http://_vscodecontentref_/9)
-       └─ ...
-
+<details>
+  <summary>プロジェクト構成</summary>
+  
+  ```
+  package.json
+  README.md
+  
+  .vscode/
+    └─ settings.json
+  
+  my-todo-app/
+    ├─ .eslintignore
+    ├─ .gitignore
+    ├─ .graphqlconfig.yml
+    ├─ amplifyPublishIgnore.json
+    ├─ eslint.config.js
+    ├─ index.html
+    ├─ package.json
+    ├─ README.md
+    ├─ tailwind.config.js
+    ├─ tsconfig.app.json
+    ├─ tsconfig.json
+    ├─ tsconfig.node.json
+    ├─ vite.config.ts
+    ├─ .vscode/
+    │    └─ settings.json
+    ├─ amplify/
+    │    ├─ cli.json
+    │    ├─ README.md
+    │    ├─ team-provider-info.json
+    │    ├─ .config/
+    │    ├─ backend/
+    │    └─ hooks/
+    ├─ build/
+    ├─ public/
+    └─ src/
+         ├─ App.tsx
+         ├─ App.css
+         ├─ index.css
+         ├─ main.tsx
+         └─ ...
+  ```
+</details>
 
 ## 使用方法
 
