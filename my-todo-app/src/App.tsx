@@ -35,7 +35,9 @@ function App() {
 
   const fetchTodos = async () => {
     try {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const todoData: any = await client.graphql(graphqlOperation(listTodos));
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const todosFromAPI = todoData.data.listTodos.items.filter((item: any) => item !== null);
       setTodos(todosFromAPI);
     } catch (err) {
@@ -51,6 +53,7 @@ function App() {
     };
 
     try {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const newTodoData: any = await client.graphql(
         graphqlOperation(createTodo, { input: todo })
       );
@@ -64,6 +67,7 @@ function App() {
   const toggleTodoStatus = async (id: string, completed: boolean) => {
     try {
       console.log('Request Payload:', { id, completed: !completed });
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const updatedTodo: any = await client.graphql(
         graphqlOperation(updateTodoStatus, { id, completed: !completed })
       );
@@ -130,7 +134,7 @@ function App() {
               <button onClick={() => toggleTodoStatus(todo.id, todo.completed)}>
                 {todo.completed ? 'Mark as Incomplete' : 'Mark as Completed'}
               </button>
-              <button onClick={() => deleteTodoItem(todo.id)} className="delete-task-button">
+              <button onClick={() => deleteTodoItem(todo.id)} className="delete">
                 Delete
               </button>
             </div>
